@@ -1,13 +1,3 @@
-import os
-import subprocess
-import sys
-
-# Force the container environment to install scikit-learn right on launch
-try:
-    import sklearn
-except ModuleNotFoundError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "scikit-learn==1.6.1"])
-
 import streamlit as st
 import pandas as pd
 import pickle
